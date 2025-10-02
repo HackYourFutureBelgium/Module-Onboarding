@@ -85,5 +85,8 @@ article {
   }
   > img {
     grid-column: span 3;
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
   }
 }
