@@ -28,8 +28,10 @@ As well as useful links to learn more */
  General rules for basic HTML elements in any context */
 body {
   background: var(--paper);
+  background-color: powderblue;
   color: var(--ink);
   font: var(--font);
+  text-align: center;
 }
 a {
   padding: var(--space);
