@@ -37,6 +37,9 @@ a {
   padding: var(--space);
   border: var(--line);
   max-width: fit-content;
+  padding-block: var(--space);
+
+  padding: var(--space);
 }
 img,
 svg {
@@ -89,3 +92,17 @@ article {
     grid-column: span 3;
   }
 }
+.sections {
+  text-align: left;
+  border: var(--line);
+  padding-inline: var(--space);
+  padding-bottom: var(--space);
+}
+.container {
+  padding-block: var(--line);
+}
+
+
+
+
+
