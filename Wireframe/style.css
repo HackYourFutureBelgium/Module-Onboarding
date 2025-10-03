@@ -17,19 +17,33 @@ As well as useful links to learn more */
  https://scrimba.com/learn-css-variables-c026
 ====== Design Palette ====== */
 :root {
-  --paper: oklch(7 0 0);
+  --paper: rgba(224, 230, 191, 0.801);
   --ink: color-mix(in oklab, var(--color) 5%, black);
   --font: 100%/1.5 system-ui;
   --space: clamp(6px, 6px + 2vw, 15px);
-  --line: 1px solid;
+  --line: 10px groove #012f5d;
   --container: 1280px;
 }
 /* ====== Base Elements ======
  General rules for basic HTML elements in any context */
-body {
+header {
+  text-align: center;
+  padding: var(--space);
+}
+header h1 {
+  font-size: 4rem;
+}
+header p {
+  font-size: 2.5rem;
+}
+ body {
   background: var(--paper);
   color: var(--ink);
   font: var(--font);
+}
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
 }
 a {
   padding: var(--space);
@@ -52,7 +66,7 @@ main {
 footer {
   position: fixed;
   bottom: 0;
-  text-align: center;
+  text-align: right;
 }
 /* ====== Articles Grid Layout ====
 Setting the rules for how articles are placed in the main element.
