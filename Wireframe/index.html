@@ -6,13 +6,34 @@
     <title>Wireframe</title>
     <link rel="stylesheet" href="style.css" />
     <style>
+      
       :root {
-      --paper: oklch(7 0 0);
-      --ink: color-mix(in oklab, var(--color) 5%, black);
-      --font: 100%/1.5 system-ui;
-      --space: clamp(6px, 6px + 2vw, 15px);
-      --line: 1px solid;
-      --container: 1280px;
+        --paper: oklch(7 0 0);
+        --ink: color-mix(in oklab, var(--color) 5%, black);
+        --font: 100%/1.5 system-ui;
+        --space: clamp(6px, 6px + 2vw, 15px);
+        --line: 1px solid;
+        --container: 1280px
+      }
+
+      body {
+        background: var(--paper);
+        color: var(--ink);
+        font: var(--font);
+      }
+      
+      a {
+        padding: var(--space);
+        border: var(--line);
+        max-width: fit-content;
+      }
+      img,
+      svg {
+        width: 100%;
+        object-fit: cover;
+      }
+
+      
       
     </style>
   </head>
