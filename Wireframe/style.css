@@ -30,21 +30,26 @@ header {
   text-align: center;
   padding: var(--space);
 }
+
 header h1 {
   font-size: 4rem;
 }
+
 header p {
   font-size: 2.5rem;
 }
- body {
+
+body {
   background: var(--paper);
   color: var(--ink);
   font: var(--font);
 }
-h2 {
-  font-size: 2.5rem;
-  text-align: center;
+
+h2{
+ text-align: center;
+ font-size: 2.5rem;
 }
+
 a {
   padding: var(--space);
   border: var(--line);
