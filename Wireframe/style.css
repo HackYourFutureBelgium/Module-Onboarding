@@ -83,25 +83,33 @@ article {
   border: var(--line);
   padding-bottom: var(--space);
   text-align: left;
+  text-justify: distribute;
   display: grid;
   grid-template-columns: var(--space) 1fr var(--space);
   > * {
     grid-column: 2/3;
   }
-  > img {
-    grid-column: span 3;
-  }
+  
 }
 .sections {
   text-align: left;
   border: var(--line);
   padding-inline: var(--space);
   padding-bottom: var(--space);
+  text-justify: distribute;
 }
 .container {
   padding-block: var(--line);
 }
 
+img {
+  object-fit: cover;
+  margin-top: 15px;
+}
+
+#pic {
+  height: 400px;
+}
 
 
 
