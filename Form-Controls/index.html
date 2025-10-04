@@ -4,20 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>T‑Shirt Order Confirmation</title>
-  <style>
-    input, select, button {
-      min-height: 44px;
-      min-width: 44px;
-      font-size: 1rem;
-    }
-    label {
-      display: inline-block;
-      margin-bottom: 8px;
-    }
-    fieldset > div {
-      margin-bottom: 8px;
-    }
-  </style>
 </head>
 <body>
   <main>
@@ -27,41 +13,41 @@
     <!-- IMPORTANT: no form action is provided as requested -->
     <form id="orderForm" aria-labelledby="pageTitle">
 
-      <div>
-        <label for="fullName">What is the customer's name? <span aria-hidden="true">*</span></label>
+      <p>
+        <label for="fullName">What is the customer's name? <span aria-hidden="true">*</span></label><br>
         <input id="fullName" name="fullName" type="text" autocomplete="name" required
                minlength="2" aria-required="true" placeholder="e.g. Anaïs O'Connor">
-      </div>
+      </p>
 
-      <div>
-        <label for="email">What is the customer's email? <span aria-hidden="true">*</span></label>
+      <p>
+        <label for="email">What is the customer's email? <span aria-hidden="true">*</span></label><br>
         <input id="email" name="email" type="email" autocomplete="email" required
                aria-required="true" placeholder="you@example.com">
-      </div>
+      </p>
 
-      <div>
+      <p>
         <input id="confirmAccount" name="confirmAccount" type="checkbox" required aria-required="true">
         <label for="confirmAccount">I confirm this is my account and I am authorised to place this order. <span aria-hidden="true">*</span></label>
-      </div>
+      </p>
 
       <fieldset>
         <legend>What colour should this t‑shirt be? <span aria-hidden="true">*</span></legend>
-        <div>
+        <p>
           <input id="colourBlack" name="colour" type="radio" value="Black" required aria-required="true">
           <label for="colourBlack">Black</label>
-        </div>
-        <div>
+        </p>
+        <p>
           <input id="colourWhite" name="colour" type="radio" value="White">
           <label for="colourWhite">White</label>
-        </div>
-        <div>
+        </p>
+        <p>
           <input id="colourNavy" name="colour" type="radio" value="Navy">
           <label for="colourNavy">Navy</label>
-        </div>
+        </p>
       </fieldset>
 
-      <div>
-        <label for="size">What size does the customer want? <span aria-hidden="true">*</span></label>
+      <p>
+        <label for="size">What size does the customer want? <span aria-hidden="true">*</span></label><br>
         <select id="size" name="size" required aria-required="true">
           <option value="" disabled selected aria-hidden="true">Choose a size</option>
           <option value="XS">XS</option>
@@ -71,11 +57,11 @@
           <option value="XL">XL</option>
           <option value="XXL">XXL</option>
         </select>
-      </div>
+      </p>
 
-      <div>
+      <p>
         <button type="submit">Confirm selection</button>
-      </div>
+      </p>
 
     </form>
   </main>
