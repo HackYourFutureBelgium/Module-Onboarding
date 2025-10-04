@@ -1,27 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>My form exercise</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
-  <body>
-    <header>
-      <h1>Product Pick</h1>
-    </header>
-    <main>
-      <form>
-        <!-- write your html here-->
-        <!-- 
-          try writing out the requirements first as comments
-        this will also help you fill in your PR message later-->
-      </form>
-    </main>
-    <footer>
-      <!-- change to your name-->
-      <h2>By HOMEWORK SOLUTION</h2>
-    </footer>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>T‑Shirt Order Confirmation</title>
+</head>
+<body>
+  <main>
+    <h1 id="pageTitle">Confirm identity & choose t‑shirt</h1>
+    <p>We already have your delivery and payment details. Please confirm you're the account holder, provide name & email, then choose colour and size.</p>
+
+    <!-- IMPORTANT: no form action is provided as requested -->
+    <form id="orderForm" aria-labelledby="pageTitle">
+
+      <div>
+        <label for="fullName">What is the customer's name? <span aria-hidden="true">*</span></label>
+        <input id="fullName" name="fullName" type="text" autocomplete="name" required
+               minlength="2" aria-required="true" placeholder="e.g. Anaïs O'Connor">
+      </div>
+
+      <div>
+        <label for="email">What is the customer's email? <span aria-hidden="true">*</span></label>
+        <input id="email" name="email" type="email" autocomplete="email" required
+               aria-required="true" placeholder="you@example.com">
+      </div>
+
+      <div>
+        <input id="confirmAccount" name="confirmAccount" type="checkbox" required aria-required="true">
+        <label for="confirmAccount">I confirm this is my account and I am authorised to place this order. <span aria-hidden="true">*</span></label>
+      </div>
+
+      <fieldset>
+        <legend>What colour should this t‑shirt be? <span aria-hidden="true">*</span></legend>
+        <div>
+          <input id="colourBlack" name="colour" type="radio" value="Black" required aria-required="true">
+          <label for="colourBlack">Black</label>
+        </div>
+        <div>
+          <input id="colourWhite" name="colour" type="radio" value="White">
+          <label for="colourWhite">White</label>
+        </div>
+        <div>
+          <input id="colourNavy" name="colour" type="radio" value="Navy">
+          <label for="colourNavy">Navy</label>
+        </div>
+      </fieldset>
+
+      <div>
+        <label for="size">What size does the customer want? <span aria-hidden="true">*</span></label>
+        <select id="size" name="size" required aria-required="true">
+          <option value="" disabled selected aria-hidden="true">Choose a size</option>
+          <option value="XS">XS</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+        </select>
+      </div>
+
+      <div>
+        <button type="submit">Confirm selection</button>
+      </div>
+
+    </form>
+  </main>
+</body>
 </html>
