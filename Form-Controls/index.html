@@ -14,13 +14,34 @@
     <main>
       <form>
         <!-- write your html here-->
-        <!-- 
+        <label for="product">Choose a product:</label>
+        <select name="product" id="product">
+          <option value="laptop">Laptop</option>
+          <option value="smartphone">Smartphone</option>
+          <option value="tablet">Tablet</option>
+          <option value="smartwatch">Smartwatch</option>
+        </select>
+        <!--
           try writing out the requirements first as comments
         this will also help you fill in your PR message later-->
+        <br /><br />
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="100" />
+        <br /><br />
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Reset" />
+        <br /><br />
+        <label for="comments">Additional Comments:</label>
+        <br />
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+        <br /><br />
       </form>
     </main>
     <footer>
       <!-- change to your name-->
+       Galina Kharitonova
+      2024
+      <p>All rights reserved.</p> 
       <h2>By HOMEWORK SOLUTION</h2>
     </footer>
   </body>
