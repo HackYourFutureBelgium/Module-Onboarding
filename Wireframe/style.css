@@ -106,15 +106,16 @@ article {
   >* {
     grid-column: 1/4;
   }
-  > summary,
-  > footer {
+
+  >summary,
+  >footer {
     grid-column: 2/3;
   }
 
-  > header > figure {
+  >header>figure {
     grid-column: span 3;
     width: 100%;
-    aspect-ratio:3/1;
+    aspect-ratio: 3/1;
     overflow: hidden;
     margin: 0;
     padding: 0;
@@ -122,7 +123,8 @@ article {
       height: 30rem;
     } */
   }
-  > header > h2{
+
+  >header>h2 {
     padding: 0 var(--space);
   }
 }
