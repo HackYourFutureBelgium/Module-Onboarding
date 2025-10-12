@@ -13,15 +13,67 @@
     </header>
     <main>
       <form>
-        <!-- write your html here-->
-        <!-- 
-          try writing out the requirements first as comments
-        this will also help you fill in your PR message later-->
+        <div>
+          <label for="name">Name:</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            required 
+            pattern="[A-Za-z\s\-]{2,50}"
+            placeholder="Enter your full name">
+        </div>
+        <div>
+          <label for="email">Email Address:</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            required 
+            placeholder="your.email@example.com">
+        </div>
+        <div>
+          <label for="color">T-Shirt Color:</label>
+          <select id="color" name="color" required>
+
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+
+          </select>
+        </div>
+        <div>
+          <label>T-Shirt Size:</label>
+          <div>
+            <input type="radio" id="size-xs" name="size" value="XS" required>
+            <label for="size-xs">XS</label>
+            
+            <input type="radio" id="size-s" name="size" value="S">
+            <label for="size-s">S</label>
+            
+            <input type="radio" id="size-m" name="size" value="M">
+            <label for="size-m">M</label>
+            
+            <input type="radio" id="size-l" name="size" value="L">
+            <label for="size-l">L</label>
+            
+            <input type="radio" id="size-xl" name="size" value="XL">
+            <label for="size-xl">XL</label>
+            
+            <input type="radio" id="size-xxl" name="size" value="XXL">
+            <label for="size-xxl">XXL</label>
+          </div>
+        </div>
+        <div>
+          <button type="submit">Place Order</button>
+        </div>
+
       </form>
     </main>
     <footer>
       <!-- change to your name-->
-      <h2>By HOMEWORK SOLUTION</h2>
+             <h3>By Basel Adoum</h3>
+
     </footer>
   </body>
 </html>
