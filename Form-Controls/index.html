@@ -17,11 +17,42 @@
         <!-- 
           try writing out the requirements first as comments
         this will also help you fill in your PR message later-->
+       <label for="name">What's your name?</label>
+       <br>
+       <input type="text" name="text" id="name" minlength="3" required value="yourName">
+       <br>
+
+       <label for="mail">What's your email?</label>
+       <br>
+       <input type="email" id="mail" name="mail" required placeholder="example@domain.com">
+    
+       <p>What color do you like?</p>
+        
+       <label for="black">black</label>
+       <input type="radio" id="black" name="answer" value="black">
+       <br>
+       <label for="white">white</label>
+       <input type="radio" id="white" name="answer" value="white">
+       <br>
+       <label for="blue">blue</label>
+       <input type="radio" id="blue" name="answer" value="blue">
+       <br>
+   
+       <label for="size">What's size?</label>
+       <select id="size" name="size">
+        <option value="xs">XS</option>
+        <option value="s">S</option>
+        <option value="m">M</option>
+        <option value="l">L</option>
+        <option value="xl">XL</option>
+        <option value="xxl">XXL</option>
+       </select>
+
       </form>
     </main>
     <footer>
       <!-- change to your name-->
-      <h2>By HOMEWORK SOLUTION</h2>
+      <h2>By Tam</h2>
     </footer>
   </body>
 </html>
