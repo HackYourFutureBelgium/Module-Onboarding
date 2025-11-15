@@ -4,24 +4,56 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>My form exercise</title>
-    <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
+
   <body>
     <header>
       <h1>Product Pick</h1>
     </header>
+
     <main>
       <form>
-        <!-- write your html here-->
-        <!-- 
-          try writing out the requirements first as comments
-        this will also help you fill in your PR message later-->
+
+        <!-- customer name -->
+        <label for="name">Name:</label>
+        <input id="name" name="name" type="text" minlength="2" required>
+
+        <br><br>
+
+        <!-- customer email -->
+        <label for="email">Email:</label>
+        <input id="email" name="email" type="email" required>
+
+        <br><br>
+
+        <!-- t-shirt colour -->
+        <p>Colour:</p>
+        <label><input type="radio" name="color" value="red" required> Red</label>
+        <label><input type="radio" name="color" value="blue"> Blue</label>
+        <label><input type="radio" name="color" value="green"> Green</label>
+
+        <br><br>
+
+        <!-- t-shirt size -->
+        <p>Size:</p>
+        <label><input type="radio" name="size" value="XS" required> XS</label>
+        <label><input type="radio" name="size" value="S"> S</label>
+        <label><input type="radio" name="size" value="M"> M</label>
+        <label><input type="radio" name="size" value="L"> L</label>
+        <label><input type="radio" name="size" value="XL"> XL</label>
+        <label><input type="radio" name="size" value="XXL"> XXL</label>
+
+        <br><br>
+
+        <button type="submit">Submit</button>
+
       </form>
     </main>
+
     <footer>
-      <!-- change to your name-->
-      <h2>By HOMEWORK SOLUTION</h2>
+      //my name
+      <h2>By MEYSAM RAZAGH</h2>
     </footer>
   </body>
 </html>
