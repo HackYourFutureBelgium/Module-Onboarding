@@ -36,3 +36,5 @@ There are some provided HTML and CSS files you can use to get started. You can u
 - [Wireframe](https://www.productplan.com/glossary/wireframe/)
 - [Semantic HTML](https://www.w3schools.com/html/html5_semantic_elements.asp)
 - [:first-child](https://developer.mozilla.org/en-US/docs/Web/CSS/:first-child)
+
+updated version
