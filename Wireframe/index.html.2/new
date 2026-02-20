@@ -1,41 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wireframe</title>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <h1>page tittle</h1>
-        <p>short description of the page</p>
+      <h1>Wireframe</h1>
+      <p>undertanding README files , Wireframes, and Git branches </p>
+      
     </header>
-        <main>
-            <section>
-                <article>
-                    <h2>article tittle</h2>
-                    <P>article summary</P>
-                    <button>read more</button>
-                    
-                </article>
+    <main>
+      <section>
+      <article>
+        <h2>What is a README File?</h2>
+        <p>
+          A README file is a document that explains what the project does . <br>how to install it, how to use it,
+         and other important information for users and developers.
+        </p>
+        <a href="http://www.makeareadme.com/" target="_blank">Read more</a>
+      </article>
 
-            </section>
+      <article>
+        <h2>What is a Wireframe</h2>
+        <p>
+          A Wireframe is a simple visiual layout of a webpage, it shows where elemnts like text , images and buttons
+          will be placed before the final design is created.
+        </p>
+        <a href="https://www.productplan.com/glossary/wireframe/" target="_blank">learn more</a>
+      </article>
+
+      <article>
+        <h2>
+          What is a branch in Git?
+        </h2>
+        <p>A branch in Git allows developers to work on different versions of project at the same time.</p>
+        <a href="https://git-scm.com/docs/git-branch" target="_blank">Learn more</a>
+      </article>
+      </section>
 
 
-        </main>
-        <footer>
-            <p>
-                links
-            </p>
-        </footer>
+      </main>
 
-
-
-
-
-
-
-    
-    
-</body>
+    <footer>
+      <p>
+       ©2026 Web Development Basics
+      </p>
+    </footer>
+  </body>
 </html>
