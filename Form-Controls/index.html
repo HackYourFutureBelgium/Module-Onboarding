@@ -1,27 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>My form exercise</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
-  <body>
-    <header>
-      <h1>Product Pick</h1>
-    </header>
-    <main>
-      <form>
-        <!-- write your html here-->
-        <!-- 
-          try writing out the requirements first as comments
-        this will also help you fill in your PR message later-->
-      </form>
-    </main>
-    <footer>
-      <!-- change to your name-->
-      <h2>By HOMEWORK SOLUTION</h2>
-    </footer>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>My form exercise</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+  <header>
+    <h1>Product Pick</h1>
+  </header>
+  
+  <main>
+    <form action="#" method="post">
+      
+      <!-- group 1: Client info -->
+      <fieldset>
+        <legend>Customer Information</legend>
+        
+        <div>
+          <label for="name">Customer's Name:</label>
+          <input type="text" id="name" name="name" required minlength="2">
+        </div>
+
+        <div>
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="user-email" required>
+        </div>
+      </fieldset>
+
+      <!-- group 2: T-shirt parameters -->
+      <fieldset>
+        <legend>T-shirt Options</legend>
+        
+        <!-- group 2.1: color -->
+        <fieldset>
+          <legend>Pick a T-shirt Color:</legend>
+
+          <div>
+            <input type="radio" id="red" name="color" value="red" required>
+            <label for="red">Red</label>
+          </div>
+
+          <div>
+            <input type="radio" id="blue" name="color" value="blue">
+            <label for="blue">Blue</label>
+          </div>
+
+          <div>
+            <input type="radio" id="green" name="color" value="green">
+            <label for="green">Green</label>
+          </div>
+        </fieldset>
+
+        <!-- group 2.2: size -->
+        <div>
+          <label for="size">T-shirt Size:</label>
+          <select id="size" name="size" required>
+            <option value="" disabled selected hidden>Choose a size...</option>
+            <option value="xs">XS</option>
+            <option value="s">S</option>
+            <option value="m">M</option>
+            <option value="l">L</option>
+            <option value="xl">XL</option>
+            <option value="xxl">XXL</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <button type="submit">Place Order</button>
+
+    </form>
+  </main>
+  
+  <footer>
+    <h2>By Nik</h2>
+  </footer>
+</body>
+
 </html>
