@@ -13,7 +13,44 @@
     </header>
     <main>
       <form>
-        <!-- write your html here-->
+        <!-- write your html here--> <!--comment like this-->
+        <div>
+        <label for="name"><b>Name</b></label> 
+        <input type="text" name="name" id="name" placeholder="Name" minlength="2" required>
+        </div>
+        <div>
+        <label for="surname"><b>Surname</b></label> 
+        <input type="text" name="surname" id="surname" placeholder="Surname" required>
+        </div>
+        <div>
+        <label for="email"><b>Email</b></label> 
+        <input type="email" name="email" id="email" placeholder="example@example.com" required>
+        </div>
+        <fieldset>
+        <legend><b>Colour of the t-shirt</b></legend>
+        <input type="radio" name="colour" id="white" value="white" required>
+        <label for="white">White</label>
+        <input type="radio" name="colour" id="black" value="black">
+        <label for="black">Black</label>
+        <input type="radio" name="colour" id="rainbow" value="rainbow">
+        <label for="rainbow">Rainbow</label>
+        </fieldset>
+        <div>
+        <label for="size">Size</label> 
+        <select name="size" id="size" required>
+        <option value="" selected disabled>Choose a size</option>
+        <option value="xs">XS</option>
+        <option value="s">S</option>
+        <option value="m">M</option>
+        <option value="l">L</option>
+        <option value="xl">XL</option>
+        <option value="xxl">XXL</option>
+        </select>
+        </div>
+        <div>
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+        </div>
         <!-- 
           try writing out the requirements first as comments
         this will also help you fill in your PR message later-->
@@ -21,7 +58,7 @@
     </main>
     <footer>
       <!-- change to your name-->
-      <h2>By HOMEWORK SOLUTION</h2>
+      <h2>By CtrlAltBeard</h2>
     </footer>
   </body>
 </html>
