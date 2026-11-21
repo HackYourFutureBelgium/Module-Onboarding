@@ -1,18 +1,85 @@
-name: Validate PR Metadata
+name: Validate PR metadata
+
 on:
+  # pull_request_target so the token can comment/remove labels on PRs from forks.
+  # Safe here because we never check out or run code from the PR.
   pull_request_target:
-    types:
-      - labeled
-      - unlabeled
-      - opened
-      - edited
-      - reopened
+    types: [opened, edited, synchronize, reopened, labeled, unlabeled]
+
+permissions:
+  pull-requests: write
+  issues: write
 
 jobs:
   validate_pr_metadata:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: CodeYourFuture/actions/validate-pr-metadata@main
+      - uses: actions/github-script@v7
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const pr = context.payload.pull_request;
+            const { owner, repo } = context.repo;
+            const number = pr.number;
+            const title = pr.title || "";
+            const MARKER = "<!-- pr-metadata-validator -->";
+
+            // Expected title: Brussels | ITP-YEAR-INTEGER | Week N | Free name
+            // Example:        Brussels | ITP-2026-2 | Week 1 | Wireframe to Web Code
+            const TITLE_REGEX = /^Brussels\s*\|\s*ITP-\d{4}-\d+\s*\|\s*Week\s+(\d+)\s*\|\s*\S.*$/;
+
+            const badTitle =
+              `Your PR's title isn't in the expected format.\n\n` +
+              `Expected: \`Brussels | ITP-YEAR-NUMBER | Week N | Name\`\n\n` +
+              `Example: \`Brussels | ITP-2026-2 | Week 1 | Wireframe to Web Code\`\n\n` +
+              `Your title: \`${title}\``;
+
+            async function deleteOldComments() {
+              const existing = await github.paginate(github.rest.issues.listComments, {
+                owner, repo, issue_number: number, per_page: 100,
+              });
+              for (const c of existing) {
+                if (c.body && c.body.includes(MARKER)) {
+                  await github.rest.issues.deleteComment({ owner, repo, comment_id: c.id });
+                }
+              }
+            }
+
+            const match = title.trim().match(TITLE_REGEX);
+            await deleteOldComments();
+
+            if (match) {
+              const weekLabel = `Week ${parseInt(match[1], 10)}`;
+              const currentLabels = (pr.labels || []).map(l => l.name);
+
+              // Drop stale week labels (e.g. title changed from Week 1 to Week 2)
+              for (const name of currentLabels) {
+                if (/^Week \d+$/.test(name) && name !== weekLabel) {
+                  try {
+                    await github.rest.issues.removeLabel({ owner, repo, issue_number: number, name });
+                  } catch (e) {
+                    if (e.status !== 404) console.log(`Error removing label ${name}: ${e}`);
+                  }
+                }
+              }
+
+              // addLabels creates the label if it doesn't exist yet
+              if (!currentLabels.includes(weekLabel)) {
+                await github.rest.issues.addLabels({ owner, repo, issue_number: number, labels: [weekLabel] });
+              }
+
+              console.log(`PR title OK (${weekLabel})`);
+              return;
+            }
+
+            await github.rest.issues.createComment({
+              owner, repo, issue_number: number,
+              body: `${MARKER}\n${badTitle}\n\nPlease update the PR title; this check re-runs automatically when you edit it.`,
+            });
+
+            try {
+              await github.rest.issues.removeLabel({ owner, repo, issue_number: number, name: "Needs Review" });
+            } catch (e) {
+              if (e.status !== 404) console.log(`Error removing label: ${e}`);
+            }
+
+            core.setFailed("PR title invalid: expected 'Brussels | ITP-YEAR-NUMBER | Week N | Name'");
