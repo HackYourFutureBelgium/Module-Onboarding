@@ -1,27 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>My form exercise</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
-  <body>
-    <header>
-      <h1>Product Pick</h1>
-    </header>
-    <main>
-      <form>
-        <!-- write your html here-->
-        <!-- 
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>My form exercise</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+  <header>
+    <h1>Product Pick</h1>
+  </header>
+  <main>
+    <form>
+      <!-- write your html here-->
+      <!-- 
           try writing out the requirements first as comments
         this will also help you fill in your PR message later-->
-      </form>
-    </main>
-    <footer>
-      <!-- change to your name-->
-      <h2>By HOMEWORK SOLUTION</h2>
-    </footer>
-  </body>
+      <!-- 1. Name: required, at least 2 characters -->
+      <!-- 2. Email: required, must be a valid email -->
+      <!-- 3. Colour: required, choose 1 of 3 colours -->
+      <!-- 4. Size: required, choose 1 of 6 sizes: XS, S, M, L, XL, XXL -->
+      <div>
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" required minlength="2" />
+      </div>
+      <div>
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <fieldset>
+        <legend>Colour *</legend>
+        <div>
+          <input type="radio" id="black" name="colour" value="black" required />
+          <label for="black">Black</label>
+        </div>
+        <div>
+          <input type="radio" id="white" name="colour" value="white" />
+          <label for="white">White</label>
+        </div>
+        <div>
+          <input type="radio" id="blue" name="colour" value="blue" />
+          <label for="blue">Blue</label>
+        </div>
+      </fieldset>
+      <div>
+        <label for="size">Size *</label>
+        <select id="size" name="size" required>
+          <option value="">Choose a size</option>
+          <option value="XS">XS</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+        </select>
+      </div>
+      <button type="submit">Submit</button>
+
+    </form>
+  </main>
+  <footer>
+    <!-- change to your name-->
+    <h2>By Leila Askari</h2>
+  </footer>
+</body>
+
 </html>
