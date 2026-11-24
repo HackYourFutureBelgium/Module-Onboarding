@@ -36,11 +36,7 @@ a {
   border: var(--line);
   max-width: fit-content;
 }
-img,
-svg {
-  width: 100%;
-  object-fit: cover;
-}
+
 /* ====== Site Layout ====== 
 Setting the overall rules for page regions
 https://www.w3.org/WAI/tutorials/page-structure/regions/
@@ -50,7 +46,6 @@ main {
   margin: 0 auto calc(var(--space) * 4) auto;
 }
 footer {
-  position: fixed;
   bottom: 0;
   text-align: center;
 }
@@ -94,4 +89,8 @@ article {
     object-fit: cover;
     border-radius: 8px;
     display: block;
+}
+
+header {
+    text-align: center;
 }
