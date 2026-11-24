@@ -3,25 +3,59 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>My form exercise</title>
+    <title>TeeCorner - T-Shirt Store</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
     <header>
-      <h1>Product Pick</h1>
+      <h1>TeeCorner</h1>
+      <h2>Find Your Perfect T-Shirt!</h2>
     </header>
     <main>
       <form>
-        <!-- write your html here-->
-        <!-- 
-          try writing out the requirements first as comments
-        this will also help you fill in your PR message later-->
+        <div>
+          <label for="name" >Name:</label>
+          <input type="text" id="name" name="name" minlength="2" placeholder="Enter your name" required />
+        </div>
+        
+        <div>
+          <label for="email" >Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required />
+        </div>
+        
+        <div>
+          <label for="color" >Color:</label>
+          <select id="color" name="color" required>
+            <option value="">Select Color</option>
+            <option value="red">Black</option>
+            <option value="blue">White</option>
+            <option value="green">Pink</option>
+          </select>
+        </div>
+        
+        <div>
+          <label for="size" >Size:</label>
+          <select id="size" name="size" required>
+            <option value="">Select Size</option>
+            <option value="xsmall">XS</option>
+            <option value="small">S</option>
+            <option value="medium">M</option>
+            <option value="large">L</option>
+            <option value="xlarge">XL</option>
+            <option value="xxlarge">XXL</option>
+          </select>
+        </div>
+
+        <button type="submit">Submit Order</button>
+
       </form>
     </main>
     <footer>
-      <!-- change to your name-->
-      <h2>By HOMEWORK SOLUTION</h2>
+      <h2>by khosasihvivia</h2>
     </footer>
   </body>
 </html>
