@@ -12,7 +12,7 @@ body {
   background: var(--paper);
   color: var(--ink);
   font: var(--font);
-  padding-bottom: 70px
+  padding-bottom: 320px
 }
 a {
   padding: var(--space);
