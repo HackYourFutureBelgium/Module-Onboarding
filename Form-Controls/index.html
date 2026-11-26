@@ -1,27 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>My form exercise</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
-  <body>
-    <header>
-      <h1>Product Pick</h1>
-    </header>
-    <main>
-      <form>
-        <!-- write your html here-->
-        <!-- 
-          try writing out the requirements first as comments
-        this will also help you fill in your PR message later-->
-      </form>
-    </main>
-    <footer>
-      <!-- change to your name-->
-      <h2>By HOMEWORK SOLUTION</h2>
-    </footer>
-  </body>
+    
+    
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+        <body>
+            <main>
+            <h1>T-shirt Order Form</h1>
+           <form>
+            <label for="name">Your name:</label>
+            <input type="text" id="name" name="name" required minlength="2">
+            
+           <label for="email">Your email address:</label>
+            <input type="email" id="email" name="email" required>
+       
+       <p>Choose your T-shirt colour and size:</p>
+      
+            <input type="radio" id="red" name="colour" value="red" required>
+            <label for="red">Red</label>
+
+            <input type="radio" id="blue" name="colour" value="blue" required>
+            <label for="blue">Blue</label>
+
+            <input type="radio" id="black" name="colour" value="black" required>
+            <label for="black">Black</label>
+      
+            
+     <p>Choose your T-shirt size:</p>>
+            
+            <input type="radio" id="XS" name="size" value="XS" required>
+            <label for="XS">XS</label>
+           
+            <input type="radio" id="S" name="size" value="S" required>
+            <label for="S">S</label>
+           
+            <input type="radio" id="M" name="size" value="M" required>
+            <label for="M">M</label>
+           
+            <input type="radio" id="L" name="size" value="L" required>
+            <label for="L">L</label>    
+           
+            <input type="radio" id="XL" name="size" value="XL" required>
+            <label for="XL">XL</label>    
+           
+            <input type="radio" id="XXL" name="size" value="XXL" required>
+            <label for="XXL">XXL</label>   
+
+            <button type="submit">Submit your order</button>
+           </form>
+            </main>
+        </body>
 </html>
